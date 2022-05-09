@@ -1,5 +1,6 @@
 package ro.fasttrackit.curs1.homework;
 
+import java.util.ArrayList;
 import java.util.List;
 
 final class Product {
@@ -12,7 +13,7 @@ final class Product {
     public Product(String name, int price, List<Category> categories, String description) {
         this.name = name;
         this.price = price;
-        this.categories = categories;
+        this.categories = new ArrayList<>(categories);
         this.description = description;
     }
 
@@ -25,7 +26,7 @@ final class Product {
     }
 
     public List<Category> getCategories() {
-        return categories;
+        return new ArrayList<>(categories);
     }
 
     public String getDescription() {
